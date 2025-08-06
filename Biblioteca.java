@@ -2,12 +2,10 @@ import java.util.ArrayList;
 
 public class Biblioteca {
     private String nome;
-    private String endereco;
     private ArrayList<Livro> livros;
     
-    public Biblioteca(String nome, String endereco) {
+    public Biblioteca(String nome) {
         this.nome = nome;
-        this.endereco = endereco;
         this.livros = new ArrayList<>();
     }
 
@@ -24,8 +22,11 @@ public class Biblioteca {
     public String getNome() {
         return nome;
     }
-
-    public String getEndereco() {
-        return endereco;
-    }    
+    public void emprestarLivro(Livro livro) {
+        if (livros.contains(livro) && !livro.emprestado) {
+            livro.emprestar(livro);
+        } else {
+            System.out.println("Erro: Livro não encontrado na biblioteca.");
+        }
+    }
 }

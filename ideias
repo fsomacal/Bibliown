@@ -1,0 +1,18 @@
+ideias:
+
+Binário para arquivar os livros, usuários (nome, login, senha e função) e empréstimos.
+
+Função para adicionar um livro à lista de desejos (caso indisponível) 
+
+função para avisar o usuario quando o livro estiver disponível, caso ele esteja na lista desejos do livro.
+
+implementar o main com a interface de usuário.
+
+talvez implementar vendas tbm além de empréstimos.
+
+apenas funcionários acessam o sistema para mexer nos livros
+
+classificação por gênero, autor, título e ano de publicação.
+
+listar os livros disponíveis e os emprestados.
+
