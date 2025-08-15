@@ -1,16 +1,13 @@
 public class Empregado extends Pessoa {
-    public Empregado(String nome, String id, String senha, int funcao, double salario) {
-        super(nome, id, senha, funcao);
-        
+    public Empregado(String id, String nome, String senha) {
+        super(nome, id, senha, 2);
     }
+
+    public String getId() { return id; }
+    public String getNome() { return nome; }
 
     @Override
     public String toString() {
-        return "Empregado{" +
-                "nome='" + GetNome() + '\'' +
-                ", id='" + GetID() + '\'' +
-                ", funcao=" + Getfuncao() 
-                ;
+        return "Empregado{id='" + GetID() + "', nome='" + GetNome() + "', funcao=" + Getfuncao() + "}";
     }
-    
 }

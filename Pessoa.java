@@ -1,5 +1,6 @@
 import java.io.Serializable;
 public abstract class Pessoa implements Serializable{
+    private static final long serialVersionUID = 1L;
     protected String nome;
     protected String id;
     protected String senha;
@@ -13,9 +14,11 @@ public abstract class Pessoa implements Serializable{
         this.funcao = funcao;
     }
 
-    public String GetNome(){return nome;};
-    public String GetID(){return id;};
+    public String GetNome(){return nome;}
+    public String GetID(){return id;}
     public String GetSenha(){return senha;}
     public int Getfuncao(){return funcao;}
-    
+
+    public void setNome(String nome){this.nome = nome;}
+    public void setSenha(String senha){this.senha = senha;}
 }
