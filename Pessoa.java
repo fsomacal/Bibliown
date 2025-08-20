@@ -21,4 +21,10 @@ public abstract class Pessoa implements Serializable{
 
     public void setNome(String nome){this.nome = nome;}
     public void setSenha(String senha){this.senha = senha;}
+
+    @Override
+public String toString() {
+    return "Nome: " + nome + " | ID: " + id;
+}
+
 }

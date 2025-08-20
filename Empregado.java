@@ -7,7 +7,8 @@ public class Empregado extends Pessoa {
     public String getNome() { return nome; }
 
     @Override
-    public String toString() {
-        return "Empregado{id='" + GetID() + "', nome='" + GetNome() + "', funcao=" + Getfuncao() + "}";
-    }
+public String toString() {
+    return "Empregado - Nome: " + getNome() + " | ID: " + getId() + " | Função: " + funcao;
+}
+
 }

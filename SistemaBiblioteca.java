@@ -19,6 +19,9 @@ public class SistemaBiblioteca {
             System.out.println("7) Emprestar livro");
             System.out.println("8) Devolver livro");
             System.out.println("9) Salvar e sair");
+            System.out.println("10) Listar clientes");
+            System.out.println("11) Listar empregados");
+
             System.out.print("Escolha: ");
             String op = sc.nextLine().trim();
 
@@ -86,6 +89,12 @@ public class SistemaBiblioteca {
                         salvar(bib);
                         System.out.println("Dados salvos. Até mais!");
                         break loop;
+                    case "10":
+                        bib.listarClientes();
+                        break;
+                    case "11":
+                        bib.listarEmpregados();
+                        break;
                     default:
                         System.out.println("Opção inválida.");
                 }
@@ -93,7 +102,6 @@ public class SistemaBiblioteca {
                 System.out.println("Erro: " + ex.getMessage());
             }
         }
-        sc.close();
     }
 
     private static Biblioteca carregarOuCriar() {
@@ -101,7 +109,6 @@ public class SistemaBiblioteca {
             return Biblioteca.carregarDe(ARQUIVO);
         } catch (Exception e) {
             Biblioteca b = new Biblioteca("Minha Biblioteca");
-            // cria um usuário admin padrão para facilitar testes
             b.adicionarEmpregado(new Empregado("admin", "Administrador", "admin"));
             return b;
         }

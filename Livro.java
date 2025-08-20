@@ -1,6 +1,6 @@
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.io.Serializable;
 
 public class Livro implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -11,8 +11,8 @@ public class Livro implements Serializable {
     private int anoPublicacao;
     private String idLivro;
 
-    boolean emprestado; // mantido default para compatibilidade
-    private String emprestadoParaId; // id do cliente
+    boolean emprestado; 
+    private String emprestadoParaId; 
     private Date dataEmprestimo;
     private Date dataDevolucaoPrevista;
 

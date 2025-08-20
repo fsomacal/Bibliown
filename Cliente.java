@@ -7,7 +7,7 @@ public class Cliente extends Pessoa {
     public String getNome() { return nome; }
 
     @Override
-    public String toString() {
-        return "Cliente{id='" + id + "', nome='" + nome + "'}";
+public String toString() {
+    return "Cliente - Nome: " + getNome() + " | ID: " + getId();
     }
 }
